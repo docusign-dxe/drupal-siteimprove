@@ -162,7 +162,8 @@ class SiteimproveUtils {
    *
    * @param $entity
    *
-   * @return array|\Drupal\Core\GeneratedUrl|string
+   * @return array
+   *
    * @throws \Drupal\Core\Entity\EntityMalformedException
    */
   public function getEntityUrls($entity) {
@@ -189,7 +190,7 @@ class SiteimproveUtils {
     }
 
     if (empty($urls)) {
-      return $entity->toUrl('canonical', ['absolute' => TRUE])->toString();
+      return [$entity->toUrl('canonical', ['absolute' => TRUE])->toString()];
     }
     else {
       return $urls;

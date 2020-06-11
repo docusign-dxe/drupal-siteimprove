@@ -1,0 +1,1 @@
+- SiteimproveUtils::getEntityUrls should always return an array: https://www.drupal.org/project/siteimprove/issues/3128478#comment-13558220
